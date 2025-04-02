@@ -3,6 +3,9 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "number"
 
+-- Make it so Neovim uses system clipboard for yanks and deletes
+vim.opt.clipboard = "unnamedplus"
+
 -- Set Indenting
 vim.opt.tabstop = 4
 vim.opt.autoindent = true
@@ -30,3 +33,12 @@ vim.cmd([[
   highlight Normal ctermbg=none
   highlight NonText ctermbg=none
 ]])
+
+-- Highlight Text on Yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("HighlightYank", { clear = true }),
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({ timeout = 200 })
+	end,
+})
