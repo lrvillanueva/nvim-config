@@ -1,13 +1,19 @@
 return {
 	init_options = { hostInfo = "neovim" },
 	cmd = { "typescript-language-server", "--stdio" },
-	root_markers = {
+	filetypes = {
 		"javascript",
 		"javascriptreact",
 		"javascript.jsx",
-		"typescript",
+		"typescripts",
 		"typescriptreact",
 		"typescript.tsx",
+	},
+	root_markers = {
+		"tsconfig.json",
+		"jsonconfig.json",
+		"package.json",
+		".git",
 	},
 	single_file_support = true,
 }

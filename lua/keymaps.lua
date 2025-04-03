@@ -19,14 +19,3 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- Keybinds for creating splits
 vim.keymap.set("n", "<leader>-", "<C-w>s", { desc = "Split window horizontally" })
 vim.keymap.set("n", "<leader>|", "<C-w>v", { desc = "Split window vertically" })
-
--- -- Highlight when yanking (copying) text
--- --  Try it with `yap` in normal mode
--- --  See `:help vim.highlight.on_yank()`
--- vim.api.nvim_create_autocmd("TextYankPost", {
--- 	desc = "Highlight when yanking (copying) text",
--- 	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
--- 	callback = function()
--- 		vim.highlight.on_yank({ higroup = "Visual", timeout = 200 })
--- 	end,
--- })
