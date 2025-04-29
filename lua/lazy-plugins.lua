@@ -13,6 +13,7 @@ require("lazy").setup({
 	require("plugins.snack"),
 	require("plugins.treesitter"),
 	require("plugins.whichkey"),
+	require("plugins.lazygit"),
 	-- automatically check for plugin updates
 	checker = { enabled = true },
 })
