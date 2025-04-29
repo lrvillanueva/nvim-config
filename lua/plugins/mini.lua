@@ -11,4 +11,13 @@ return {
 		require("mini.pairs").setup({})
 		require("mini.surround").setup({})
 	end,
+	keys = {
+		{
+			"<leader>mm", -- Toggle the minimap
+			function()
+				require("mini.map").toggle()
+			end,
+			desc = "Toggle minimap",
+		},
+	},
 }

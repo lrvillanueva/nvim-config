@@ -12,6 +12,12 @@ return {
 	keys = {
 		-- Search
 		{
+			"<leader>sd",
+			function()
+				Snacks.picker.diagnostics()
+			end,
+		},
+		{
 			"<leader>sg",
 			function()
 				Snacks.picker.grep()
@@ -44,7 +50,7 @@ return {
 			function()
 				Snacks.picker.help()
 			end,
-			desc = "[S]earch via [G]rep",
+			desc = "[S]earch [H]elp files",
 		},
 		{
 			"<leader>su",
