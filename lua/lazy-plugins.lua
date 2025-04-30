@@ -2,7 +2,7 @@
 require("lazy").setup({
 	-- List of plugins go here
 	require("plugins.blink"),
-	require("plugins.supermaven"),
+	require("plugins.code-complete"),
 	require("plugins.colorscheme"),
 	require("plugins.conform"),
 	require("plugins.gitsigns"),
@@ -13,7 +13,7 @@ require("lazy").setup({
 	require("plugins.snack"),
 	require("plugins.treesitter"),
 	require("plugins.whichkey"),
-	require("plugins.lazygit"),
+	-- require("plugins.lazygit"),
 	-- automatically check for plugin updates
 	checker = { enabled = true },
 })

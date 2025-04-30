@@ -7,6 +7,7 @@ return {
 		indent = {},
 		picker = {},
 		statuscolumn = {},
+		lazygit = {},
 		zen = {},
 	},
 	keys = {
@@ -131,6 +132,14 @@ return {
 				Snacks.zen.zoom()
 			end,
 			desc = "Enable [Z]oom Mode",
+		},
+		-- LazyGit
+		{
+			"<leader>gg",
+			function()
+				Snacks.lazygit.open()
+			end,
+			desc = "Open Lazygit",
 		},
 	},
 }
